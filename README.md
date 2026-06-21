@@ -41,17 +41,42 @@ The repository supports generation of the following synthetic network models:
 - Random Geometric (RG)
 
 Each script returns a connected graph that can be used as input for downstream evaluation.
+## Evaluation Commands
 
-## Usage
+To reproduce the synthetic graph generation used in this study:
 
-Open MATLAB and ensure all files are in the current working directory or MATLAB path.
+1. Open MATLAB (R2022a or later recommended).
+2. Clone or download this repository.
+3. Add the repository folder to the MATLAB path or set it as the current working directory.
+4. Run the desired graph generation function.
 
-Example:
+### Example commands
+
+Generate a Wireless Sensor Network (WSN):
 
 ```matlab
-G = generate_wsn(250);
+G = create_connected_network('WSN', 250);
 ```
 
-# Reproducibility
+Generate an Erdős–Rényi (ER) network:
+
+```matlab
+G = create_connected_network('ER', 250);
+```
+
+Generate a Barabási–Albert (BA) network:
+
+```matlab
+G = create_connected_network('BA', 250);
+```
+
+Generate a Random Geometric (RG) network:
+
+```matlab
+G = create_connected_network('RG', 250);
+```
+
+The experimental parameters (e.g., number of nodes and model-specific settings) can be modified in `config.m` or within the graph generation scripts before execution.
+
 
 The graph generation code and configuration parameters correspond to those used in the experiments reported in the associated manuscript. Researchers may use these scripts to recreate the synthetic network topologies under the same parameter settings.
