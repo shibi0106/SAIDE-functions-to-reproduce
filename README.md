@@ -52,16 +52,6 @@ Example:
 G = generate_wsn(250);
 ```
 
-or
-
-```matlab
-G = generate_er(250, 0.02);
-```
-
-## Reproducibility
+# Reproducibility
 
 The graph generation code and configuration parameters correspond to those used in the experiments reported in the associated manuscript. Researchers may use these scripts to recreate the synthetic network topologies under the same parameter settings.
-
-## Notes
-
-This repository provides **only the synthetic graph generation scripts and configuration information**. The optimization algorithms and evaluation framework used in the study are not included in this release.
