@@ -11,13 +11,13 @@ The purpose of releasing these files is to facilitate reproducibility of the net
 ## Included Files
 
 README.md
-config.m                 (or configuration information)
-create_connected_network.m
+network_config.m                 (or configuration information)
 connect_components.m
 generate_wsn.m
 generate_er.m
 generate_ba.m
 generate_rg.m
+seedlist.txt
 ## Experimental Configuration
 
 The default parameters used in the experiments are:
@@ -76,7 +76,7 @@ Generate a Random Geometric (RG) network:
 G = create_connected_network('RG', 250);
 ```
 
-The experimental parameters (e.g., number of nodes and model-specific settings) can be modified in `config.m` or within the graph generation scripts before execution.
+The experimental parameters (e.g., number of nodes and model-specific settings) can be modified in `network_config.m` or within the graph generation scripts before execution.
 
 
 The graph generation code and configuration parameters correspond to those used in the experiments reported in the associated manuscript. Researchers may use these scripts to recreate the synthetic network topologies under the same parameter settings.
